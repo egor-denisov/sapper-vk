@@ -2,7 +2,6 @@
 	"name": "sapper-vk",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://github.com/egor-denisov/sapper-vk",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.4.0",
@@ -25,9 +24,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"predeploy": "react-scripts build",
-		"deploy": "gh-pages -b main -d build"
+		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -48,7 +45,6 @@
 		]
 	},
 	"devDependencies": {
-		"gh-pages": "^5.0.0",
 		"prettier": "2.8.4",
 		"redux-devtools-extension": "^2.13.9"
 	}
