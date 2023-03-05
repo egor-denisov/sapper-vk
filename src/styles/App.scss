@@ -1,0 +1,69 @@
+@import 'Colors.scss';
+
+$sprite: url('../../public/sprite.png') no-repeat;
+
+* {
+	padding: 0;
+	margin: 0;
+}
+#root {
+	background-color: $baby-powder;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.App {
+		background-color: $silver-2;
+		border: 3px solid $white;
+		border-right-color: $gray;
+		border-bottom-color: $gray;
+		padding: 5px;
+		transform: scale(1.5);
+		.header,
+		.body {
+			border: 3px solid $gray;
+			border-right-color: $white;
+			border-bottom-color: $white;
+		}
+		.header {
+			background-color: $silver;
+			padding: 5px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.timer,
+			.count {
+				display: flex;
+				.digit {
+					background: $sprite;
+					background-position: 0 0;
+					width: 13px;
+					height: 23px;
+					padding: 0;
+				}
+			}
+			.smile {
+				background: $sprite;
+				background-position: 0 -24px;
+				width: 26px;
+				height: 26px;
+				cursor: pointer;
+			}
+		}
+		.body {
+			display: grid;
+			grid-template-columns: repeat(16, 1fr);
+			grid-template-rows: repeat(16, 1fr);
+			.cell {
+				width: 16px;
+				height: 16px;
+				background: $sprite;
+				background-position: 0 -51px;
+			}
+		}
+	}
+}
