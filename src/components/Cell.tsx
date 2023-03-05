@@ -26,6 +26,15 @@ const Cell: FC<props> = ({ id, value, currentCell, setCurrentCell }) => {
 	const { youWin, inGame } = useTypedSelector((state) => state.game)
 	const { setSmileCondition, recreateField, openCell, setFlag } = useActions()
 
+	const onHover = () => {
+		if (value === undefined) {
+			setCurrentCell({ active: true, values: [id] })
+		} else if (Number(value) >= 1 && Number(value) <= 8) {
+			setCurrentCell({ active: true, values: getNearCells(id) })
+		} else {
+			setCurrentCell({ active: true, values: [] })
+		}
+	}
 	const onMouseUp = (e: React.MouseEvent) => {
 		setSmileCondition(0)
 		setCurrentCell({ active: false, values: [] })
@@ -38,16 +47,10 @@ const Cell: FC<props> = ({ id, value, currentCell, setCurrentCell }) => {
 		}
 	}
 	const onMouseDown = (e: React.MouseEvent) => {
-		if (youWin === null && e.button === 0) {
-			if (value === undefined) {
-				setCurrentCell({ active: true, values: [id] })
-			} else if (Number(value) >= 1 && Number(value) <= 8) {
-				setCurrentCell({ active: true, values: getNearCells(id) })
-			}
-		}
+		if (youWin === null && e.button === 0) onHover()
 	}
 	const onMouseEnter = () => {
-		if (currentCell.active) setCurrentCell({ ...currentCell, values: [id] })
+		if (currentCell.active) onHover()
 	}
 	const onContextMenu = (e: React.MouseEvent) => {
 		e.preventDefault()
