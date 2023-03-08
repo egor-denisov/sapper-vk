@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sapper VK
 
-## Available Scripts
+The project was made as a solution to a test assignment for a VK internship
 
-In the project directory, you can run:
+## Content
+- [Live Demo](https://github.com/egor-denisov/sapper-vk#live-demo)
+- [Final product](https://github.com/egor-denisov/sapper-vk#final-product)
+- [Running the project](https://github.com/egor-denisov/sapper-vk#running-the-project)
+- [About the game](https://github.com/egor-denisov/sapper-vk#about-the-game)
+- [Features](https://github.com/egor-denisov/sapper-vk#features)
+- [Dependencies](https://github.com/egor-denisov/sapper-vk#dependencies)
+- [Credits](https://github.com/egor-denisov/sapper-vk#credits)
 
-### `npm start`
+## Live Demo
+Live demo is implemented using [versel](https://vercel.com/). You can look at the project by clicking on the links:
+- https://sapper-vk.vercel.app/
+- https://sapper-vk-egor-denisov.vercel.app/
+## Final product
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Start field
+![](https://sun9-west.userapi.com/sun9-49/s/v1/ig2/Z5qJKfWzdAFjsnQMWfN7AWfWfKn_VULknmnYs_js3sPPmV8Ukv2FyXMO2i9gZgs0LYyw0RdfQeopp_kEZnYJBnM3.jpg?size=1920x924&quality=95&type=album "Start field")
+- Losing field
+![](https://sun9-east.userapi.com/sun9-74/s/v1/ig2/CAthioehI3AYabz-PSnzaa7HdXLX2CrtG3j0T8HwwhdUtbHmHXtstoBnJvou23Si6or8ssz8jfxwaqvM-kdExXGP.jpg?size=1917x931&quality=95&type=album "Losing field")
+- Winning field
+![](https://sun9-west.userapi.com/sun9-10/s/v1/ig2/3WP7LVb0r6XDbzapHaWUbmzuKQBTJmJ6ezIAEF8K6hLZ05URFkvV1O_UrRCpP2T2qN203Ts_iNYmZmQaHd-8UBFZ.jpg?size=1917x929&quality=95&type=album "Winning field")
+- During field
+![](https://sun9-east.userapi.com/sun9-19/s/v1/ig2/Sm_5CYPuSRT9b1ZqDffo1hF2KxYDcoW183B56EdzNabqxozhFo1NhoBpw-sHfzwEH6sdYFsz5y3hl1m0ViwBo_5h.jpg?size=1920x932&quality=95&type=album "During field")
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Running the project
+To run the project go to the downloaded directory. Then run the commands:
 
-### `npm test`
+```
+# Run app on 3000 port
+# Install missing packages
+npm install
+# Start index.js
+npm start 
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Аfter executing these commands, you can go to http://localhost:3000/
 
-### `npm run build`
+## About the game
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A classic minesweeper game in which you need to open all the cells without mines.
+- Field 16x16
+- 40 mines
+- In the upper left corner there is a counter of mines not marked with a flag
+- In the upper right corner there is a stopwatch
+- Cells can be set with a flag (right-click) or a question (right-click again)
+- To restart the game, click on the smiley face in the center
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- When you click on a cell and move to another one, the one that is now under the mouse cursor will open
+- By clicking on an open non-empty cell, you can view its "neighbors"
+- If the number of flags on the field becomes 40 (the number of mines), then it becomes impossible to put flags
+- The user's first click never hits a mine
+- In case of defeat, the fields in which the flags were incorrectly placed are highlighted in red
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dependencies
+- React.js
+- Redux
+- Typescript
+- SCSS
 
-### `npm run eject`
+## Credits
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I took the idea of appearance and functionality [from here](https://xn--80a4adb6f.com/)
