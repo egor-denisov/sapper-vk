@@ -37,8 +37,8 @@ const Cell: FC<props> = ({ id, value, currentCell, setCurrentCell }) => {
 	}
 	const onMouseUp = (e: React.MouseEvent) => {
 		setCurrentCell({ active: false, values: [] })
+		setSmileCondition(0)
 		if (youWin === null && e.button === 0 && value === undefined) {
-			setSmileCondition(0)
 			if (!inGame) {
 				recreateField(id)
 			} else {
